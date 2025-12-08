@@ -4,7 +4,8 @@ public class Main {
         // Please write your code here.
     Scanner sc = new Scanner(System.in);
     int N = sc.nextInt();
-
+    int i = 1;
+    
     while(i <= N){
         if(i % 3 == 0){
             System.out.print(i + " ");
