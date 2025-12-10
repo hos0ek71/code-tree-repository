@@ -8,11 +8,12 @@ public class Main {
     int cnt = 0;
 
     while(i <= N) {
-        i++;
         if(i % 2 == 0 || i % 3 == 0 || i % 5 == 0){
+            i++;
             continue;
         }
         cnt++;
+        i++;
     }
     System.out.print(cnt);
     }
