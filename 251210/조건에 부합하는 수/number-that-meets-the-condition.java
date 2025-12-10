@@ -8,7 +8,7 @@ public class Main {
 
 
     while(i <= A) {
-        if((i % 2 == 0 && i % 4 != 0) || (i / 8) % 2 == 0) || (i % 7 < 4))  {
+        if( (i % 2 == 0 && i % 4 != 0) || (i / 8) % 2 == 0 || (i % 7 < 4))  {
             i++;
             continue;
         }
