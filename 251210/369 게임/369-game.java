@@ -6,7 +6,8 @@ public class Main {
     int N = sc.nextInt();
     int i = 1;
     while(i <= N) {
-        if( i % 3 == 0 || (i % 10 == 3 || i % 10 == 6 || i % 10 == 9)) {
+        if( i % 3 == 0 || (i % 10 == 3 || i % 10 == 6 || i % 10 == 9) || (i / 10 == 3 || i / 10 == 6 || i / 10 == 9)) {
+
             System.out.print(0 + " ");
         }
         else {
