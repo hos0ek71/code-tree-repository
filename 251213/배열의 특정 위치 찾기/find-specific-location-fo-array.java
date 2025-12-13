@@ -11,7 +11,7 @@ public class Main {
     for(int i = 0; i < 10; i++) {
         arr[i] = sc.nextInt();
 
-        if(arr[i] % 3 == 0) {
+        if((i+1) % 3 == 0) {
             sum3 += arr[i];
             count++;
         }
@@ -22,7 +22,7 @@ public class Main {
         sum2 += arr[i];
     }
 
-    System.out.print(sum2 +" " + ((double) sum3/count) );
+    System.out.printf("%d %.1f", sum2, ((double)sum3/count));
     
     }
 }
