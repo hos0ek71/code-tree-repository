@@ -19,7 +19,7 @@ public class Main {
         count++;
 
         if(count == 4) {
-            stu[i / 4] = sum / 4;
+            stu[i % 3] = sum / 4;
             sum = 0;
             count = 0;
         }
