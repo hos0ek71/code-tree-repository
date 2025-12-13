@@ -10,6 +10,7 @@ public class Main {
         sum += a;
     }
 
-    System.out.println(sum / 8);
+    double result = sum / 8;
+    System.out.printf("%.1f",result);
     }
 }
