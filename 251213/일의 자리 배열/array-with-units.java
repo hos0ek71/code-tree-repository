@@ -12,7 +12,7 @@ public class Main {
 
         for(int i = 3; i < 11; i++) {
             arr[i] = arr[i-1] + arr[i-2];
-            if(arr[i] % 10 != 0) {
+            if(arr[i] % 10 != 0 || arr[i] % 10 == 0) {
                 arr[i] = arr[i] % 10;
             }
         }
