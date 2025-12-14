@@ -12,12 +12,15 @@ public class Main {
     for(int i = N; i > 0; i--) {
         for(int j = i; j > 0; j--) {
             count++;
-            
         }
+
         for(int k = 0; k < count; k++) {
-            
-            System.out.print("*" + " ");
+            for(int l = 0; l < count; l++){
+                System.out.print("*");
+            }
+            System.out.print(" ");
         }
+        
         System.out.println();
         count = 0;
     }
