@@ -9,7 +9,7 @@ public class Main {
 
     for(int i = (N * 2)-1; i > 0; i--) {
         for(int j = cnt; j > 0; j--){
-            System.out.print("*");
+            System.out.print("*" + " ");
             
         }
 
