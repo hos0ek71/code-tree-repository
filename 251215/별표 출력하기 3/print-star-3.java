@@ -1,7 +1,10 @@
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         // Please write your code here.
-    int n = 5; 
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    
     for(int i = n; i > 0; i--){
         for(int k =0 ; k < n-i ; k++) {
             System.out.print("  ");
