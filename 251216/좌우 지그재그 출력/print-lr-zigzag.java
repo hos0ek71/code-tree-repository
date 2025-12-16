@@ -21,7 +21,7 @@ public class Main {
             }
         }
     System.out.println();
-    count += 3;
+    count += n;
     }
     }
 }
