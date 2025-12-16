@@ -1,8 +1,9 @@
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         // Please write your code here.
-    
-    int n = 4;
+    Scanenr sc = new Scanenr(System.in);
+    int n = sc.nextInt();
     
     for(int i = n; i > 0; i--) {
         if(i % 2 == 0) {
