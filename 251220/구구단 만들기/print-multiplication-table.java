@@ -1,7 +1,11 @@
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        int a = 10;
-        int b = 18;
+    Scanner sc = new Scanner(System.in);
+    int a = sc.nextInt();
+    int b = sc.nextInt();
+
+     
         int num2 = (b - a)/2 + 1;
         int i = 0;
 
@@ -18,15 +22,14 @@ public class Main {
             i++;
         }
 
-        for(int j = 0; j <= 5; j++) {
-            System.out.println(arr[j]);
-        }
-
-        // for(int i = 1; i <= 9; i++) {
-        //      for(int j = num; j > 0; j--) {
-        //          System.out.print(num[i-1]);
-        //      }
-        //  }
+         for(int k = 1; k <= 9; k++) {
+              for(int j = num2; j > 0; j--) {
+                  System.out.print(arr[j-1] + " " + "*" + " " + k + " " + "=" + " " + arr[j-1] * k + " ");
+                  if(j != 1)
+                  System.out.print("/" + " ");
+              }
+              System.out.println();
+          }
     }
     // public static int gcd(int a, int b) {      // 🔧 변경
     // int i = 0;
