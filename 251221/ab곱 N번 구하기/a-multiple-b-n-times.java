@@ -11,12 +11,15 @@ public class Main {
         int a = sc.nextInt();
         int b = sc.nextInt();
 
-        int sum = 0;
-
+        int sum = 1; 
         for(int j = a; j <= b; j++){
-            sum += a * j;
+            sum *= j;
+            
         }
         System.out.println(sum);
+        
+        
+        
     }
     }
 }
