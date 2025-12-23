@@ -5,14 +5,17 @@ public class Main {
     
     int[] arr = new int[100];
     Scanner sc = new Scanner(System.in);
-    int A = sc.nextInt();
-    int B = sc.nextInt();
+    /*int A = sc.nextInt();
+    int B = sc.nextInt(); */
+    int A = 907;
+    int B = 10;
     int result = 0;
 
     while(A > 1) {
-        
-        A = A / B;
+
         result = A % B;
+        A = A / B;
+        
         arr[result]++;
     }
 
@@ -21,6 +24,7 @@ public class Main {
     for(int i = 0; i < 100; i++){
         if(arr[i] > 0) {
             sum += arr[i]*arr[i];
+            
         }
     }
     System.out.print(sum);
