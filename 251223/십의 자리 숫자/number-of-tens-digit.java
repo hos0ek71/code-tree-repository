@@ -14,8 +14,9 @@ public class Main {
             i++;
         }
 
-        for(int j = 1; j <= 9; j++) {
-         countArr[arr[j] / 10]++;
+        for(int j = 1; j <= 100; j++) {
+        
+         countArr[arr[j] / 10 ]++;
         }
 
         for(int j = 1; j <= 9; j++) {
