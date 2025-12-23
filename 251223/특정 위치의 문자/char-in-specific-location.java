@@ -7,6 +7,7 @@ public class Main {
 
         int idx = -1;
         char input = sc.next().charAt(0);
+        
         for(int i = 0; i < 6; i++){
             if(word[i] == input) {
                 idx = i;
