@@ -5,17 +5,16 @@ public class Main {
     
     int[] arr = new int[100];
     Scanner sc = new Scanner(System.in);
-    /*int A = sc.nextInt();
-    int B = sc.nextInt(); */
-    int A = 907;
-    int B = 10;
+    int A = sc.nextInt();
+    int B = sc.nextInt(); 
+    
+    
     int result = 0;
 
     while(A > 1) {
 
         result = A % B;
         A = A / B;
-        
         arr[result]++;
     }
 
