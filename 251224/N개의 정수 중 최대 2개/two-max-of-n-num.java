@@ -12,6 +12,7 @@ public class Main {
             
             int A = sc.nextInt();
             if(A > maxVal) {
+                secondVal = maxVal;
                 maxVal = A;
             }
             else{
