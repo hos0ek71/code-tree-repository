@@ -16,7 +16,7 @@ public class Main {
     int j; 
     while(true) {
 
-        for(int i = 0; i < 5; i++){
+        for(int i = 0; i < N; i++){
             if(arr[i] < minVal) minVal = arr[i];
             idx = i;
         }
