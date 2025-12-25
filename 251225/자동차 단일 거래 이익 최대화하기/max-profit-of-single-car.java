@@ -1,33 +1,24 @@
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-    int minVal = Integer.MAX_VALUE;
-    int maxVal = Integer.MIN_VALUE;
+        Scanner sc = new Scanner(System.in);
 
-    Scanner sc = new Scanner(System.in);
-    int N = sc.nextInt();
-    int[] arr= new int[N];  
-    
-    for(int i = 0; i < N; i++){
-        arr[i] = sc.nextInt();
-    }
+        int N = sc.nextInt();
+        int[] arr = new int[N];
 
-    int idx = -1;
-    int j; 
-    while(true) {
-
-        for(int i = 0; i < N; i++){
-            if(arr[i] < minVal) minVal = arr[i];
-            idx = i;
+        for (int i = 0; i < N; i++) {
+            arr[i] = sc.nextInt();
         }
-        for(j = idx; j < N; j++){
-            if(arr[j] > maxVal) maxVal = arr[j];  
-        }
-        if(j == N) break;
-    }
 
-    boolean result = (minVal == maxVal);
-    System.out.println(result ? 0 : maxVal-minVal);
-    
+        int minPrice = arr[0];
+        int maxProfit = 0;
+
+        for (int i = 1; i < N; i++) {
+            maxProfit = Math.max(maxProfit, arr[i] - minPrice);
+            minPrice = Math.min(minPrice, arr[i]);
+        }
+
+        System.out.println(maxProfit);
     }
 }
