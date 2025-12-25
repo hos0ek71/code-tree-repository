@@ -5,20 +5,20 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int N = sc.nextInt();
-        int[] arr = new int[N];
+        int[] price = new int[N];
 
         for (int i = 0; i < N; i++) {
-            arr[i] = sc.nextInt();
+            price[i] = sc.nextInt();
         }
 
-        int minPrice = arr[0];
         int maxProfit = 0;
+        for(int i = 0; i < N; i++){
+            for(int j = i+1; j < N; j++) {
+                int profit =  price[j] - price[i];
 
-        for (int i = 1; i < N; i++) {
-            maxProfit = Math.max(maxProfit, arr[i] - minPrice);
-            minPrice = Math.min(minPrice, arr[i]);
+                if(profit > maxProfit) maxProfit = profit;
+            }
         }
-
-        System.out.println(maxProfit);
+        System.out.print(maxProfit);
     }
 }
