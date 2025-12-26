@@ -5,9 +5,10 @@ public class Main {
     int cnt = 1;
     int N = sc.nextInt();
     int[][] arr = new int[N][N];
+    int count = 0; 
 
     for(int row = N-1 ; row >= 0; row--) {
-        if(row % 2 != 0){
+        if(count % 2 == 0){
             for(int column = N- 1; column >= 0; column--) {
             arr[column][row] = cnt++;
         }
@@ -17,6 +18,7 @@ public class Main {
                 arr[column][row] = cnt++;
             }
         }
+        count++;
         
     }
 
