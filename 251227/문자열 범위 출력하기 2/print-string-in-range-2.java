@@ -4,8 +4,12 @@ public class Main {
     Scanner sc = new Scanner(System.in);
     String str = sc.next();
     int num = sc.nextInt();
+    int len = str.length();
 
-    for(int i = str.length()-1; i >= str.length() - num; i--){
+    int stratIndex = len - num ;
+    if(stratIndex <= 0 ) stratIndex = 0;
+
+    for(int i = len-1; i >= stratIndex; i--){
         System.out.print(str.charAt(i));
     }
     }
