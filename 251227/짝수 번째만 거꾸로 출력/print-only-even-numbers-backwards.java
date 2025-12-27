@@ -5,8 +5,8 @@ public class Main {
     String str = sc.next();
     int N = str.length();
 
-    for(int i = 0; i < N; i++) {
-        if(i % 2 == 0) System.out.print(str.charAt(N-1-i));
+    for(int i = N-1; i >= 0; i--) {
+        if(i % 2 != 0) System.out.print(str.charAt(i));
     }
     }
 }
