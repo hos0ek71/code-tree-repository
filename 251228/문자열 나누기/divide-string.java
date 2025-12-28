@@ -15,10 +15,9 @@ public class Main {
       if(cnt != 0 && cnt % 5 == 0) {
         System.out.println(result);
         result = "";
-        
       }
-      if(i == str.length() - 1) System.out.print(result);
     }
+    if(!result.isEmpty()) System.out.print(result);
     
 
     
