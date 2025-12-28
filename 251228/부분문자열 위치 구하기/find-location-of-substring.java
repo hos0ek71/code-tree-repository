@@ -1,21 +1,13 @@
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
-    String str = sc.nextLine();
-    String tar = sc.nextLine();
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        String tar = sc.nextLine();
 
-    int len = str.length();
-
-    for(int i = 0; i < len-1; i++){
-        if(str.substring(i, i+2).equals(tar)) {
+        // indexOf는 존재하면 인덱스(0 포함)를, 없으면 -1을 반환합니다.
+        // 루프를 돌릴 필요 없이 바로 출력하면 됩니다.
         System.out.print(str.indexOf(tar));
-        break;
-        }
-    }
-// tar가 str 안에 존재하지 않으면 -1을 출력
-if (str.indexOf(tar) == -1) {
-    System.out.print(-1);
-}
     }
 }
