@@ -7,7 +7,7 @@ public class Main {
     sc.nextLine();
     String str = sc.nextLine();
     int cnt = 0; 
-    int a = 0; 
+    
     for(int i = 0; i < str.length(); i++){
       if(str.charAt(i) == ' ') continue;
       result += str.charAt(i);
@@ -15,12 +15,13 @@ public class Main {
       if(cnt != 0 && cnt % 5 == 0) {
         System.out.println(result);
         result = "";
-        a++;
+        
       }
+      if(i == str.length() - 1) System.out.print(result);
     }
     
 
-    System.out.println(a);
+    
 
 
     }
