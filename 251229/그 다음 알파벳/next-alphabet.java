@@ -4,6 +4,11 @@ public class Main {
     Scanner sc = new Scanner(System.in);
     char A = sc.next().charAt(0);
 
-    System.out.print((char)(A+1));
+    char result = (char)(A+1);
+    if (result > 'z' ) {
+        result = 'a';
+    }
+
+    System.out.print(result);
     }
 }
