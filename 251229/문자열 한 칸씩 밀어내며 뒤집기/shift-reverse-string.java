@@ -4,31 +4,30 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String result = sc.next(); // 초기 문자열
-        int N = sc.nextInt();      // 연산 횟수
+        // 1. 초기 문자열과 연산 횟수 N 입력
+        String result = sc.next();
+        int N = sc.nextInt();
+
         int len = result.length();
 
         for (int i = 0; i < N; i++) {
             int Q = sc.nextInt();
 
             if (Q == 1) {
-                // 왼쪽 회전: 1번 인덱스부터 끝까지 + 0번 인덱스
+                // 왼쪽으로 한 칸 회전 (ABC -> BCA)
                 result = result.substring(1) + result.substring(0, 1);
             } 
             else if (Q == 2) {
-                // 오른쪽 회전: 마지막 글자 + 0번부터 마지막 직전까지
+                // 오른쪽으로 한 칸 회전 (ABC -> CAB)
                 result = result.substring(len - 1) + result.substring(0, len - 1);
             } 
             else if (Q == 3) {
-                // 문자열 뒤집기 (반복문 사용)
-                String reversed = ""; 
-                for (int j = len - 1; j >= 0; j--) {
-                    // 뒤에서부터 한 글자씩 가져와서 새로운 문자열에 더함
-                    reversed += result.charAt(j);
-                }
-                result = reversed; // 뒤집힌 문자열을 다시 result에 저장
+                // 문자열 뒤집기 (ABC -> CBA)
+                StringBuilder sb = new StringBuilder(result);
+                result = sb.reverse().toString();
             }
 
+            // 각 연산 후 결과 출력
             System.out.println(result);
         }
         sc.close();
