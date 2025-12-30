@@ -3,10 +3,11 @@ n = int(input())
 # Please write your code here.
 
 def div(n):
+    total = 0;
     for i in range(1,n+1):
-        sum += i
-    return sum / 10
+        total += i
+    return total / 10
 
 
-print(div(n))
+print(int(div(n)))
     
