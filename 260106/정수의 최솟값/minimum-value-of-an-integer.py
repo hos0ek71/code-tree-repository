@@ -20,6 +20,13 @@ def minInt(a, b, c):
         else:
             print(a)
     
+    elif(a == b):
+
+        if(a > c):
+            print(c)
+        else:
+            print(a)
+    
     else:
         print(a)
 minInt(a,b,c)
