@@ -1,15 +1,22 @@
 a, b = map(int, input().split())
 
-cnt = 0
-for i in range(a, b + 1):
-    # 1. 숫자를 문자열로 변환 (예: 135 -> "135")
-    s = str(i)
-    
-    # 2. '3', '6', '9'가 문자열 안에 있는지 확인하거나 3의 배수인지 확인
-    has_369 = ('3' in s) or ('6' in s) or ('9' in s)
-    is_mul_3 = (i % 3 == 0)
-    
-    if has_369 or is_mul_3:
+def contains_369(n):
+
+    while n > 0: 
+        if n % 10 == 3 or n % 10 == 6 or n % 10 == 9:
+            return True
+        
+        n = n // 10
+
+    return False
+
+def is_369_number(n):
+    return contains_369(n) or (n % 3 == 0)
+
+cnt = 0 
+for i in range(a, b+1):
+    if(is_369_number(i)):
         cnt += 1
 
 print(cnt)
+
