@@ -3,7 +3,7 @@ M, D = map(int, input().split())
 # Please write your code here.
 
 def date(M,D):
-    if M != 2:
+    if M != 2 and 1 <= M <= 12  :
         if M > 7:
             if M % 2 == 0:
                 return thione(D)
@@ -14,12 +14,14 @@ def date(M,D):
                 return thi(D)
             else:
                 return thione(D) 
-    else:
+    elif M == 2:
         if D <= 28:
             return True
         else:
             return False
-
+            
+    else:
+        return False
 
 def thione(D):
     if D <= 31:
