@@ -37,7 +37,7 @@ def Season(M, D, Y):
         print(month(M))
     else:
         # 날짜가 유효하지 않을 때의 처리 (필요시)
-        print("Invalid Date")
+        print(-1)
 
 # 실행 시 Y, M, D를 모두 전달합니다.
 Season(M, D, Y)
