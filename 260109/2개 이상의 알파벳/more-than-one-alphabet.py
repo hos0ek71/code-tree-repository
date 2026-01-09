@@ -6,7 +6,7 @@ leng = len(A)
 def dif2(A, leng):
 
     fisrt = A[0]
-    cnt = 0
+    cnt = 1
     
     for i in range(1, leng):
 
@@ -14,7 +14,7 @@ def dif2(A, leng):
 
             cnt += 1
 
-        if cnt > 2:
+        if cnt == 2:
             return True
         
         first = A[i]
