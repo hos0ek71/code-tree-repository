@@ -4,5 +4,10 @@ N = int(input())
 
 def mul(N):
     if N < 10:
-        return N
-    return mul (N // 10) + N*N
+        return N ** 2         
+        
+    return (N % 10) ** 2 + mul(N//10)
+    
+     
+
+print(mul(N))
