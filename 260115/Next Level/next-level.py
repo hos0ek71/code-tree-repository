@@ -10,7 +10,7 @@ class user:
 
 
 one = user()
-two = user("hello", 28)
+two = user(user2_id, user2_level)
 
 print(f"user {one.id} lv {one.level}")
 print(f"user {two.id} lv {two.level}")
