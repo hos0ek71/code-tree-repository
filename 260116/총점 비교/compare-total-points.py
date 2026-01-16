@@ -12,7 +12,7 @@ arr = [input().split() for _ in range(n)]
 grade = [StudentGrade(name, kor, eng, math) for name, kor, eng, math in arr ]
 
 
-grade.sort(key = lambda x : (x.kor+x.eng,x.math))
+grade.sort(key = lambda x : (x.kor+x.eng+x.math))
 
 for value in grade:
     print(value.name, value.kor, value.eng, value.math)
