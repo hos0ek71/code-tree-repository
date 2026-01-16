@@ -5,7 +5,7 @@ points = [tuple(map(int, input().split())) + (i + 1,) for i in range(n)]
 def 멘하턴(p):
     x, y = p[0], p[1] # 튜플에서 x, y를 꺼냄
     
-    return abs(x+y)
+    return abs(x) + abs(y)
    
 
 # 정렬 실행
