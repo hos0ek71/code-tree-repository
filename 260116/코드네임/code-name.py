@@ -14,13 +14,15 @@ for _ in range(MAX_N):
 
 # Please write your code here.
 min = 100000
+idx = 0
 
 for i in range(5):
     agt = agents[i]
-    if int(agt.p) < min:
-        min = i
+    if int(agt.p) < int(min):
+        min = agt.p
+        idx = i
 
-minAgent = agents[min]
+minAgent = agents[idx]
 print(minAgent.n, minAgent.p)
 
     
