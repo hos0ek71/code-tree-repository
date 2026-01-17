@@ -15,8 +15,10 @@ public class Main {
 
         if (dis > 0)
             System.out.println(weekDay[dis]);
-        else 
+        else if (dis < 0)
             System.out.println(minusWeekDay[Math.abs(dis)]);
+        else 
+            System.out.println("Mon");
 
     }
 }
