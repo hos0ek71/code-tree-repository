@@ -16,6 +16,11 @@ public class Main {
 
         while(true) {
 
+            if (targetTime < startTime) {
+                elapsedTime = -1;
+                break;
+            }
+               
             if (startTime == targetTime) 
                 break;
 
