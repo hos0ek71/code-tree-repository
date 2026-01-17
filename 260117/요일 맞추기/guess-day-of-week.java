@@ -3,7 +3,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String[] weekDay = new String[] {"0","Mon","Tue","Wed","Thu","Fri","Sat","Sun"};
+        String[] weekDay = new String[] {"Mon","Tue","Wed","Thu","Fri","Sat","Sun"};
         String[] minusWeekDay = new String[] {"0","Sun","Sat","Fri","Thu","Wed","Tue","Mon"};
 
         int m1 = sc.nextInt();
