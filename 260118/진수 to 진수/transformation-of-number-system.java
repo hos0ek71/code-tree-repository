@@ -9,12 +9,14 @@ public class Main {
 
 
         int sum = 0;
-        for(int i = 0; i < N.lenth; i++){
-            sum = sum * A + N[i];
+    
+        for(int i = 0; i < N.length(); i++){
+            int digit = N.charAt(i) - 48;
+            sum = sum * A + digit;
         }
 
-        int[] arr = new arr[20];
-        cnt = 0; 
+        int[] arr = new int[20];
+        int cnt = 0; 
 
         while(true) {
 
@@ -29,9 +31,11 @@ public class Main {
 
         }
         
-        for(int i = cnt-1; i >=0; i--) {
+        for(int i = cnt-1; i >= 0; i--) {
             System.out.print(arr[i]);
         }
+
+        
 
 
     }
