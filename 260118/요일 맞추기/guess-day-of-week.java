@@ -28,7 +28,7 @@ public class Main {
         int diff = day2 - day1;
 
         // 4️⃣ 요일 계산 (음수 보정)
-        int idx = ((diff % 7) + 7) % 7;
+        int idx = ((diff + 7) % 7);
     
 
         // 5️⃣ 출력
