@@ -1,21 +1,27 @@
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        int n = 29;
-        int[] digits = new int[20];
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        int[] arr = new int[20];
         int cnt = 0;
 
-        while (true) {
-            if(n < 2) {
-                digits[cnt++] = n;
+        while(true){
+
+            if( n < 2 ) {
+                arr[cnt++]= n;
                 break;
             }
-        
-            digits[cnt++] = n % 2;
+
+            arr[cnt++] = n % 2;
             n /= 2;
+
         }
-        
-        // print binary number
-        for(int i = cnt - 1; i >= 0; i--)
-            System.out.print(digits[i]);
+
+        for(int i = cnt-1; i >= 0; i--){
+            System.out.print(arr[i]);
+        }
+        // Please write your code here.
     }
 }
