@@ -1,7 +1,7 @@
 n = int(input())
 segments = [tuple(map(int, input().split())) for _ in range(n)]
 
-line = [0] * 100
+line = [0] * 101
 # Please write your code here.
 
 for i in range(n):
@@ -11,7 +11,6 @@ for i in range(n):
 
 maxNum = float('-inf')
 for value in line:
-    
     if value > maxNum:
         maxNum = value
 
