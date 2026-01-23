@@ -3,11 +3,14 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int[] arr = new int [100];
+        int[] arr = new int [500];
 
         for (int i = 0; i < n; i++) {
             int x1 = sc.nextInt();
             int x2 = sc.nextInt();
+            
+            x1 = x1 + 100;
+            x2 = x2 + 100;
 
             for (int j = x1; j <= x2-1; j++){
                 arr[j]++;
