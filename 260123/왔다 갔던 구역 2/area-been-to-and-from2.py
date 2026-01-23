@@ -10,7 +10,7 @@ for _ in range(n):
     dir.append(di)
 
 nextPos = 0
-currentPos = 2001
+currentPos = 1000
 
 for i in range(n):
     if dir[i] == 'R':
@@ -19,8 +19,8 @@ for i in range(n):
         nextPos = currentPos - x[i]
     
     # print(move)
-    for i in range(min(currentPos, nextPos),max(currentPos, nextPos)):
-        arr[i] += 1
+    for j in range(min(currentPos, nextPos),max(currentPos, nextPos)):
+        arr[j] += 1
 
     currentPos= nextPos
 
