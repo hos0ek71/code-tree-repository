@@ -7,7 +7,7 @@ for _ in range(n):
     x2.append(c)
     y2.append(d)
 
-arr = [[0] * 201 for _ in range(201)]
+arr = [[0] * 205 for _ in range(205)]
 OFFSET = 100
 
 for i in range(n):
@@ -16,13 +16,18 @@ for i in range(n):
     ay1 = y1[i]
     ay2 = y2[i]
 
+    if i % 2 == 0:
+        color = 1
+    else:
+        color = 2
+
     for j in range(ax1, ax2):
         for k in range(ay1, ay2):
-            arr[j+OFFSET][k+OFFSET] = i + 1
+            arr[j+OFFSET][k+OFFSET] = color
 
 blue = 0
-for row in range(201):
-    for column in range(201):
+for row in range(205):
+    for column in range(205):
         if arr[row][column] == 2:
             blue += 1
 
