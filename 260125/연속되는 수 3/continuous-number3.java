@@ -8,13 +8,16 @@ public class Main {
         for (int i = 0; i < n; i++)
             arr[i] = sc.nextInt();
         
-        // Please write your code here.
+        
 
         int maxNum = Integer.MIN_VALUE;
         int cnt = 1; 
-        for (int i = 0; i < n-1; i++){
-            
-            if ( (arr[i] > 0 && arr[i+1] > 0) || (arr[i] < 0 && arr[i+1] < 0) )
+        for (int i = 0; i < n; i++){
+            if (i == 0){
+                cnt = 1;
+            }
+
+            else if ( (arr[i] > 0 && arr[i-1] > 0) || (arr[i] < 0 && arr[i-1] < 0) )
                 cnt++;
             else {
                 cnt = 1;
