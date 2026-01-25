@@ -11,18 +11,22 @@ public class Main {
 
         int[] idx = new int[n];
 
+        int maxNum = Integer.MIN_VALUE;
+        int cnt = 1;
         for (int i = 0; i < n; i++){
-            if(i == 0 || arr[i] != arr[i-1])
-                idx[i]++;
+            
+            if(i == 0 || arr[i] == arr[i-1])
+                cnt++;
+            else{
+                cnt = 1;
+            }
+            if (cnt > maxNum)
+                maxNum = cnt; 
+            
         }
 
-        int maxNum = Integer.MIN_VALUE;
-        for (int i = 0; i < n; i++){
-                System.out.print(idx[i] + " ");
-            }
-        
-
         System.out.println(maxNum);
+    
         // Please write your code here.
 
     
