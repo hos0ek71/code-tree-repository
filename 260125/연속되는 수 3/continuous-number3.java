@@ -11,11 +11,10 @@ public class Main {
         // Please write your code here.
 
         int maxNum = Integer.MIN_VALUE;
-        int cnt = 0; 
+        int cnt = 1; 
         for (int i = 0; i < n-1; i++){
-            if (i == 0) 
-                cnt = 1;
-            else if ( (arr[i] > 0 && arr[i+1] > 0) || (arr[i] < 0 && arr[i+1] < 0) )
+            
+            if ( (arr[i] > 0 && arr[i+1] > 0) || (arr[i] < 0 && arr[i+1] < 0) )
                 cnt++;
             else {
                 cnt = 1;
