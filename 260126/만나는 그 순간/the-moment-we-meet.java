@@ -55,12 +55,19 @@ public class Main {
                 }
             }
         }
+        int maxtime = Math.max(timeA, timeB);
+        int mintime = Math.min(timeA, timeB);
+        int ans = -1;
 
-        for (int i = 0; i < 2000001; i++){
-            if (i != 0 && arrA[i] == arrB[i]) {
-                System.out.println(i);
+        for (int i = 1; i < maxtime; i++){
+            if (arrA[i] == arrB[i]) {
+                ans = i;
                 break;
             }
+            
         }
+        System.out.println(ans);
     }
 }
+
+ 
