@@ -17,7 +17,7 @@ for _ in range(m):
     d2.append(direction)
 
 # Please write your code here.
-time = 0
+timeA = 0
 OFFSET = 50001
 arrA = [0] * 1000000
 cur = 0  
@@ -26,50 +26,52 @@ for i in range(n):
     dis = t1[i]
     if d1[i] == 'R':
         for j in range(dis):
-            time += 1
+            timeA += 1
             cur += 1
-            arrA[time] = cur
+            arrA[timeA] = cur
     else:
         for j in range(dis):
-            time += 1
+            timeA += 1
             cur -= 1
-            arrA[time] = cur
+            arrA[timeA] = cur
 
 arrB = [0] * 1000000
-time = 0
+timeB = 0
 cur = 0
 for i in range(m):
 
     dis = t2[i]
     if d2[i] == 'R':
         for j in range(dis):
-            time += 1
+            timeB += 1
             cur += 1
-            arrB[time] = cur
+            arrB[timeB] = cur
     else:
         for j in range(dis):
-            time += 1
+            timeB += 1
             cur -= 1
-            arrB[time] = cur
+            arrB[timeB] = cur
 
-time_a = len(arrA) - 1
-time_b = len(arrB) - 1
-    
-    # 전체 시뮬레이션 시간은 둘 중 더 늦게 끝난 로봇 기준
-max_time = max(time_a, time_b)
-    # A가 먼저 멈췄다면, 남은 시간 동안 마지막 위치(cur_a)로 채우기
-for _ in range(time_a, max_time):
-    arrA.append(arrA[time_a])
 
-# B가 먼저 멈췄다면, 남은 시간 동안 마지막 위치(cur_b)로 채우기
-for _ in range(time_b, max_time):
-    arrB.append(arrB[time_b])
+# 실제로 둘 중 더 오래 움직인 시간까지만 비교하면 됩니다.
+max_time = max(timeA, timeB)
 
+# [Padding] A가 먼저 멈췄다면, A의 마지막 위치(arrA[time_a])로 max_time까지 채워줌
+for i in range(timeA + 1, max_time + 1):
+    arrA[i] = arrA[timeA]
+
+# [Padding] B가 먼저 멈췄다면, B의 마지막 위치(arrB[time_b])로 max_time까지 채워줌
+for i in range(timeB + 1, timeB + 1):
+    arrB[i] = arrB[timeB]
+
+# [비교] 1초부터 max_time까지만 돌리면 됩니다. (100만까지 돌릴 필요 X)
 cnt = 0
-for i in range(1, 1000000):
-    if arrA[i] == arrB[i] and arrA[i-1] !=  arrB[i-1]:
+for i in range(1, max_time + 1):
+    if arrA[i] == arrB[i] and arrA[i-1] != arrB[i-1]:
         cnt += 1
+
 print(cnt)
+
 
 
 
