@@ -12,20 +12,19 @@ public class Main {
         }
 
         int[] penaltyCount = new int[n+1];
-        for (int i = 0; i <= n; i++){
+        for (int i = 0; i < m; i++){
             penaltyCount[penalizedPerson[i]]++;
             
         }
-        int ans = 1;
-        for (int i = 0; i <= m; i++){
-            if(penaltyCount[i] >= k ){
+        int ans = -1;
+        for (int i = 0; i <= n; i++){
+            if(penaltyCount[i] == k ){
                 ans = i;
                 break;
                 
             }
             
         }
-
         System.out.println(ans);
 
         // Please write your code here.
