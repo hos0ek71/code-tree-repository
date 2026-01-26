@@ -40,7 +40,7 @@ public class Main {
             char direction = sc.next().charAt(0);
             int distance = sc.nextInt();
 
-            if (direction = 'R'){
+            if (direction == 'R'){
                 for (int j = 0; j < distance; j++){
                     timeB++;
                     cur++;
@@ -48,7 +48,7 @@ public class Main {
                 }
             }
             else {
-                for (int j = 0; j < distacne; j++){
+                for (int j = 0; j < distance; j++){
                     timeB++;
                     cur--;
                     arrB[timeB] = cur;
@@ -57,7 +57,7 @@ public class Main {
         }
 
         for (int i = 0; i < 2000001; i++){
-            if (arrA[i] == arrB[i]) {
+            if (i != 0 && arrA[i] == arrB[i]) {
                 System.out.println(i);
                 break;
             }
