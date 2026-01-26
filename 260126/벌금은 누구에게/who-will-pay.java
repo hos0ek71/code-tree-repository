@@ -18,8 +18,8 @@ public class Main {
         }
 
         for (int i = 0; i <= n; i++){
-            if(penaltyCount[i] >= 2 ){
-                System.out.println(penaltyCount[i] -1);
+            if(penaltyCount[i] >= k ){
+                System.out.println(i);
                 break;
                 
             }
