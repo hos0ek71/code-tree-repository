@@ -17,8 +17,8 @@ for _ in range(m):
     t2.append(ti)
 
 # Please write your code here.
-arrA = [0] * 2001 
-arrB = [0] * 2001
+arrA = [0] * 1000000 
+arrB = [0] * 1000000
 
 timeA = 0
 spdSum = 0 
@@ -49,7 +49,7 @@ for i in range(1, maxTime):
         if sundu == 2:
             cnt += 1
         sundu = 1
-        
+
     elif arrA[i] < arrB[i]:
         if sundu == 1:
             cnt += 1
