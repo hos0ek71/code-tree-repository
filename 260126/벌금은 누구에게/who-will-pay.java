@@ -16,14 +16,17 @@ public class Main {
             penaltyCount[penalizedPerson[i]]++;
             
         }
-
-        for (int i = 0; i <= n; i++){
+        int ans = 1;
+        for (int i = 0; i <= m; i++){
             if(penaltyCount[i] >= k ){
-                System.out.println(i);
+                ans = i;
                 break;
                 
             }
+            
         }
+
+        System.out.println(ans);
 
         // Please write your code here.
     }
