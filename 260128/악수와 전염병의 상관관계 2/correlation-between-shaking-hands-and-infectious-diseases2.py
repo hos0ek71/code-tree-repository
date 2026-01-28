@@ -24,7 +24,8 @@ for t,x,y in (handshakes):
     # [체크 5] 핵심 로직 오류: 
     # 'k == x'는 '전염 횟수 k'와 '개발자 번호 x'를 비교하는 거라 의미가 맞지 않아요.
     # "만약 x가 감염된 상태이고(True), 남은 전염 횟수(count[x])가 0보다 크다면"으로 바꿔야 합니다.
-    
+    x_was_infected = infected[x]
+    y_was_infected = infected[y]
 
     if infected[x] == True and count[x] < k:
         infected[y] = True
