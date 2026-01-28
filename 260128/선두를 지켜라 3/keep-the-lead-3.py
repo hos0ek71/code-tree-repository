@@ -17,7 +17,7 @@ for _ in range(M):
     t2.append(ti)
 
 # Please write your code here.
-arrA = [0] * 1000001
+arrA = [0] * 10000000
 totalA = 0
 timeA = 0
 for i in range(N):
@@ -27,7 +27,7 @@ for i in range(N):
         timeA += 1
         arrA[timeA] = totalA
 
-arrB = [0] * 1000001
+arrB = [0] * 10000000
 totalB = 0
 timeB = 0
 for i in range(M):
