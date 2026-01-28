@@ -17,7 +17,7 @@ for _ in range(M):
     t2.append(ti)
 
 # Please write your code here.
-arrA = [0] * 10000000
+arrA = [0] * 1000000
 totalA = 0
 timeA = 0
 for i in range(N):
@@ -27,7 +27,7 @@ for i in range(N):
         timeA += 1
         arrA[timeA] = totalA
 
-arrB = [0] * 10000000
+arrB = [0] * 1000000
 totalB = 0
 timeB = 0
 for i in range(M):
@@ -38,22 +38,22 @@ for i in range(M):
         arrB[timeB] = totalB
     
 totalTime = timeA
-sundu = 0
+sundu = 3
 cnt = 0
 for i in range(1, totalTime+1):
     if arrA[i] > arrB[i]:
-        if sundu == 2 or sundu == 3: 
-            cnt += 1
-        sundu = 1
-
+        now_sundu = 1
+        
+   
     elif arrB[i] > arrA[i]:
-        if sundu == 1 or sundu == 3:
-            cnt += 1
-        sundu = 2
+        now_sundu = 2
+        
     else:
-        if sundu == 2 or sundu == 1:
-            cnt += 1
-        sundu == 3
+        now_sundu = 3
+
+    if now_sundu != sundu:
+        cnt += 1
+        sundu = now_sundu
     
         
 print(cnt)
