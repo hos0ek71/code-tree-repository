@@ -27,11 +27,11 @@ for t,x,y in (handshakes):
     x_was_infected = infected[x]
     y_was_infected = infected[y]
 
-    if infected[x] == True and count[x] < k:
+    if x_was_infected == True and count[x] < k:
         infected[y] = True
         count[x] += 1
 
-    if infected[y] == True and count[y] < k:
+    if  y_was_infected== True and count[y] < k:
         infected[x] = True
         count[y] += 1
 
