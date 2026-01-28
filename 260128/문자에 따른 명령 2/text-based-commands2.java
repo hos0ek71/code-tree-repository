@@ -17,7 +17,7 @@ public class Main {
             char cmd = dir.charAt(i);
 
             if (cmd == 'L') {
-                curdir = (curdir - 1) % 4;
+                curdir = (curdir - 1 + 4) % 4;
             }
             else if(cmd == 'R') {
                 curdir = (curdir + 1) % 4;
@@ -26,6 +26,7 @@ public class Main {
             else {
                 x = dx[curdir] + x;
                 y = dy[curdir] + y;
+                break;
             }
 
         }
