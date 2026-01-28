@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Please write your code here.
+        int curdir = 3;
+        int x = 0;
+        int y = 0;
+        int[] dx = new int[] {1,0,-1,0};
+        int[] dy = new int[] {0,-1,0,1};
+
+        String dir = sc.next();
+
+        for (int i = 0; i < dir.length(); i++){
+            char cmd = dir.charAt(i);
+
+            if (cmd == 'L') {
+                curdir = (curdir - 1) % 4;
+            }
+            else if(cmd == 'R') {
+                curdir = (curdir + 1) % 4;
+            }
+
+            else {
+                x = dx[curdir] + x;
+                y = dy[curdir] + y;
+            }
+
+        }
+        System.out.printf("%d, %d" , x y);
+
+
+    }
+}
