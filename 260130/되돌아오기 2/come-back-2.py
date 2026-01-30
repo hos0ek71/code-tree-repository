@@ -20,7 +20,7 @@ def getDir(direction, dir ):
 
 prevdir = 0
 cnt = 0
-result = 0
+result = False
 for i in range(len(commands)):
     dir = commands[i]
     
@@ -35,10 +35,11 @@ for i in range(len(commands)):
         cnt += 1
 
     if x == 0 and y == 0:
-        result = cnt
-    
-    if x != 0 and y != 0:
-        result = -1
+        result = True
+        break
 
-print(result)
+if result :
+    print(cnt)
+else:
+    print(-1)
 
