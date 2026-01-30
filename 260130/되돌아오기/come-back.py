@@ -34,6 +34,12 @@ def moveCount(moves, x, y):
 
             if x == 0 and y == 0:
                 return time
+    return -1
+    
+        
+       
+     
 
-moveCount(moves, x, y)
-print(time)
+         
+
+print(moveCount(moves, x, y))
