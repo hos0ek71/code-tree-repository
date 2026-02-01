@@ -10,8 +10,8 @@ def isRange(nx, ny):
 dx = [-1,0,1,0]
 dy = [0,1,0,-1]
 
-x = (3 // 2)
-y = (3 // 2)
+x = (N // 2)
+y = (N // 2)
 dir = 0 
 sum = board[x][y]
 
