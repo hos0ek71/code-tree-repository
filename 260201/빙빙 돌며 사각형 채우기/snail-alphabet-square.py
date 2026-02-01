@@ -20,17 +20,20 @@ cnt = 65
 for num in range(2, n*m+1):
     nx = x + dx[dir]
     ny = y + dy[dir]
-    cnt += 1
+    
     if not isRange(nx,ny) or arr[nx][ny] != 0:
         dir = (dir + 1) % 4
     
     x = x + dx[dir]
     y = y + dy[dir]
 
-    if cnt > 90:
+    
+    if cnt >= 90:
         cnt = 64
 
+    cnt += 1
     arr[x][y] = cnt
+    
 
 for row in arr:
     for value in row:
