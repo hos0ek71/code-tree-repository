@@ -33,12 +33,12 @@ else:
     x, y, d = n*4 -k-1, 0, 1
 
 cnt = 0                
-for value in grid:
-    dir = getDir(value, d)
-    x = x + dx[dir]
-    y = y + dx[dir]
+cnt = 0
+
+while 0 <= x < n and 0 <= y < n:
+    d = getDir(grid[x][y], d)
+    x += dx[d]
+    y += dy[d]
     cnt += 1
-    if x < 0 or y < 0:
-        break
 
 print(cnt)
