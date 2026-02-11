@@ -1,9 +1,10 @@
+import sys
 n = int(input())
 a = [int(input()) for _ in range(n)]
 
 # Please write your code here.
 
-minSum = 10000
+minSum = sys.maxsize
 
 for i in range(n):
     sum = 0
