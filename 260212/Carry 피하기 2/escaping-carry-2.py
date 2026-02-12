@@ -18,7 +18,7 @@ def notCarry(a,b,c):
     return notCarry(a//10, b//10, c//10)
 
 carry = 0 
-maxNum = 0 
+maxNum = -1
 for i in range(n):
     for j in range(i+1,n):
         for k in range(j+1,n):
