@@ -8,11 +8,17 @@ secMaxNum = 0
 for i in range(n):
     for j in range(n-2):
         if maxNum < (arr[i][j] + arr[i][j+1] + arr[i][j+2]):
-            maxNum = arr[i][j] + arr[i][j+1] + arr[i][j+2]
+            # maxNum = arr[i][j] + arr[i][j+1] + arr[i][j+2]
+            print("첫번째",i,j, end=" ")
+
             secMaxNum = 0 
-            for k in range(i+1, n):
-                for l in range(n-2):
-                    secMaxNum = max(arr[k][l]+arr[k][l+1]+arr[k][l+2], secMaxNum)
+            for k in range(i, n):
+                for l in range(j+1, n-2):
+                    # secMaxNum = max(arr[k][l]+arr[k][l+1]+arr[k][l+2], secMaxNum)
+                    print("두번째",k,l, end=" ")
+                print()
+    print()
+            
                     
 print(maxNum + secMaxNum)
         
