@@ -5,27 +5,31 @@ arr = [input() for _ in range(N)]
 
 directions = [(0,1),(1,0),(-1,1),(1,1)]
 
+cnt = 0 
 def isRange(x, y):
     return 0 <= x and x < N and 0 <= y and y < M
 
-for i in range(N-2):
-    for j in range(M-2):
+for i in range(N):
+    for j in range(M):
         
         
         for k in range(4):
             dx, dy = directions[k]
+            name = "" 
 
             for step in range(3):
 
-                nx = j + (dx * step)
+                nx = i + (dx * step)
                 ny = j + (dy * step)
 
                 if not isRange(nx, ny):
                     break;
-                print(arr[nx][ny], end="")
+                name += arr[nx][ny]
 
-            print()
+            if name == 'LEE' or name == 'EEL':
+                cnt += 1
+                
+print(cnt)
 
-            
-            
+       
 
