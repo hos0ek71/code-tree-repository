@@ -13,13 +13,19 @@ for i in range(N-2):
         
         
         for k in range(4):
+            dx, dy = directions[k]
+
             for step in range(3):
 
-            nx = j + (dx * step)
-            ny = j + (dy * step)
+                nx = j + (dx * step)
+                ny = j + (dy * step)
 
-            if not isRange(nx, ny):
-                break;
+                if not isRange(nx, ny):
+                    break;
+                print(arr[nx][ny], end="")
+
+            print()
+
             
             
-            
+
