@@ -8,12 +8,7 @@ for _ in range(n):
 
 # Please write your code here.
 
-position = 0 
-
-for i in range(len(x)):
-    position = max(x[i], position)
-
-idx = [0] * (position+2)
+idx = [0] * (10001)
 
 for pos,alpa in zip(x,c):
     if alpa == 'G':
@@ -27,11 +22,12 @@ for pos,alpa in zip(x,c):
     
     
 maxNum = 0 
-for i in range(1,position-k+2):
+for i in range(10000-k+1):
     sum = 0 
-    for j in range(i,i+k+1):
+    for j in range(i, i + k + 1):
         sum += idx[j]
-        maxNum = max(maxNum, sum)
-        
 
+    maxNum = max(maxNum, sum)
+        
+    
 print(maxNum)
