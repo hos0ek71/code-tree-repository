@@ -32,6 +32,6 @@ for i in range(1,position-k+2):
     for j in range(i,i+k+1):
         sum += idx[j]
         maxNum = max(maxNum, sum)
-        print(i,j)
+        
 
 print(maxNum)
