@@ -18,7 +18,7 @@ for i in range(N):
         # print()
         
         
-        if idx+1 >= 3:
+        if idx+1 >= T:
             minNum = min(add, minNum)
             
             # print()
