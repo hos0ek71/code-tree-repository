@@ -5,17 +5,18 @@ abSum = 0
 for value in abilities:
     abSum += value
 
-length = len(abilities)
 minNum = 1000000
 
-for i in range(length-3+1):
+for i in range(4):
     sum = 0 
-    for j in range(i,i+3):
-        for k in range(i,j+1):
-            sum += abilities[k]
+    for j in range(i+1,5):
+        for k in range(j+1, 6):
 
-        sum2 = abSum - sum
-        minNum = min(minNum , abs(sum2-sum))
+            sum = abilities[i] + abilities[j] + abilities[k]
+
+            sum2 = abSum - sum
+        
+            minNum = min(minNum , abs(sum2-sum))
 
 print(minNum)
         
