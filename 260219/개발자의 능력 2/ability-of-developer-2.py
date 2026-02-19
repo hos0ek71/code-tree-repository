@@ -26,7 +26,7 @@ for i in range(6):
 
                 diffteam = min(diffteam, maxteam - minteam)
 
-print(diffteam)
+print(difftea)
 
 
 
