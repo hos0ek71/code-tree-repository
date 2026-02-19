@@ -1,3 +1,4 @@
+import sys
 arr = list(map(int, input().split()))
 
 # Please write your code here.
@@ -14,11 +15,17 @@ for i in range(5):
                 if i == k or j == k or i == l or j == l:
                     continue
 
+                if arr[i] == arr[k] and arr[j] == arr[k] and arr[i] == arr[l] and arr[j] == arr[l]:
+                    print(-1)
+                    sys.exit()
+
+
                 team1 = arr[i] + arr[j]
                 team2 = arr[k] + arr[l]
                 team3 = sum - (team1 + team2)
                 
                 result = max(team1,team2,team3) - min(team1,team2,team3)
+                
                 if result > 0:
                     ans = min(ans, result)
                 
