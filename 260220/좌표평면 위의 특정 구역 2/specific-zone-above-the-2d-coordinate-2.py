@@ -9,9 +9,9 @@ rect = 160000
 for i in range(n):
 
     maxW  = 0
-    minW = 400001
+    minW = 40001
     maxH = 0
-    minH = 400001
+    minH = 40001
 
     for j in range(n):
 
@@ -26,7 +26,7 @@ for i in range(n):
         width = (maxW-minW) * (maxH-minH)
         # print(f"x:{maxW},x:{minW},y:{maxH},y;{minH}, width : {width}")
 
-    if (maxW-minW) * (maxH-minH) > 0 and rect > (maxW-minW) * (maxH-minH):
+    if rect > (maxW-minW) * (maxH-minH):
             rect = (maxW-minW) * (maxH-minH)
             
         # print(rect)
