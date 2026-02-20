@@ -4,7 +4,7 @@ x = [p[0] for p in points]
 y = [p[1] for p in points]
 
 # Please write your code here.
-rect = 160000
+rect = 1600000001
 
 for i in range(n):
 
