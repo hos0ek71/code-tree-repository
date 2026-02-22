@@ -4,7 +4,7 @@ x = [p[0] for p in points]
 y = [p[1] for p in points]
 
 # Please write your code here.
-minNum = 1000
+minNum = 10000
 for i in range(n):
     for j in range(n):
         for k in range(n):
